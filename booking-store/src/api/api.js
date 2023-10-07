@@ -1,3 +1,3 @@
-const BooksApi = "https://www.googleapis.com/books/v1/volumes?q=all&key=AIzaSyCM18sqZIhEhCDBCMUP3LzJSpkHymRpZXY"
+const BooksApi = "https://example-data.draftbit.com/books?_limit=32"
 
 export default BooksApi;

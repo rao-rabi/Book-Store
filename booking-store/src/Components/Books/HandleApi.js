@@ -1,8 +1,9 @@
-import BooksApi from '../../api/api'
+import BooksApi from "../../api/api";
 
-const HandleBooksApi = async() => {
-    const response = await fetch(BooksApi)
-    return response.json()
-}
+const HandleBooksApi = async () => {
+  const response = await fetch(BooksApi);
+  return response.json();
+  
+};
 
-export default HandleBooksApi
+export default HandleBooksApi;
