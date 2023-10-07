@@ -1,6 +1,8 @@
 import contact_img from "../../assets/pexels-nisa-18429581.jpg";
+import { styles } from "../../style";
 function Contact() {
   return (
+    <>
     <div>
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex flex-col space-y-8 pb-10 pt-12 md:pt-24">
@@ -29,72 +31,72 @@ function Contact() {
                 </p>
                 <form action="" className="mt-8 space-y-4">
                   <div className="grid w-full gap-y-4 md:gap-x-4 lg:grid-cols-2">
-                    <div className="grid w-full  items-center gap-1.5">
+                    <div className={styles.inputLabelDiv}>
                       <label
-                        className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className={styles.inputLabel}
                         htmlFor="first_name"
                       >
                         First Name
                       </label>
                       <input
-                        className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                        className={styles.inputForm}
                         type="text"
                         id="first_name"
                         placeholder="First Name"
                       />
                     </div>
-                    <div className="grid w-full  items-center gap-1.5">
+                    <div className={styles.inputLabelDiv}>
                       <label
-                        className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        className={styles.inputLabel}
                         htmlFor="last_name"
                       >
                         Last Name
                       </label>
                       <input
-                        className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                        className={styles.inputForm}
                         type="text"
                         id="last_name"
                         placeholder="Last Name"
                       />
                     </div>
                   </div>
-                  <div className="grid w-full  items-center gap-1.5">
+                  <div className={styles.inputLabelDiv}>
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className={styles.inputLabel}
                       htmlFor="email"
                     >
                       Email
                     </label>
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                      className={styles.inputForm}
                       type="text"
                       id="email"
                       placeholder="Email"
                     />
                   </div>
-                  <div className="grid w-full  items-center gap-1.5">
+                  <div className={styles.inputLabelDiv}>
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className={styles.inputLabel}
                       htmlFor="phone_number"
                     >
                       Phone number
                     </label>
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                      className={styles.inputForm}
                       type="tel"
                       id="phone_number"
                       placeholder="Phone number"
                     />
                   </div>
-                  <div className="grid w-full  items-center gap-1.5">
+                  <div className={styles.inputLabelDiv}>
                     <label
-                      className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      className={styles.inputLabel}
                       htmlFor="message"
                     >
                       Message
                     </label>
                     <textarea
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                      className={styles.inputForm}
                       id="message"
                       placeholder="Leave us a message"
                       cols="3"
@@ -118,6 +120,7 @@ function Contact() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

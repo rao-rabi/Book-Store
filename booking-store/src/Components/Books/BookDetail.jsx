@@ -1,19 +1,3 @@
-// import { useParams } from "react-router-dom";
-
-// function BookDetail() {
-//   const { id } = useParams();
-
-// //   const BookData = fetchBookData(id)
-//   return (
-//     <div>
-//       <h1>Book Details</h1>
-//       <h1>book id: {id}</h1>
-//     </div>
-//   );
-// }
-
-// export default BookDetail;
-
 import { useLocation } from "react-router-dom";
 
 function BookDetail() {
@@ -25,7 +9,8 @@ function BookDetail() {
   }
 
   return (
-    <div className="flex mt-5 gap-9 mx-36">
+    <>
+    <div className="flex md:flex-nowrap flex-wrap mt-5 gap-9 lg:mx-36 md:mx-24 mx-8">
       <div className="h-96">
         <img
           src={book?.image_url}
@@ -43,6 +28,7 @@ function BookDetail() {
       <h1 className="text-lg pt-2"><span className="font-bold text-xl">Quote: </span>{book?.Quote2}</h1>
       </div>
     </div>
+    </>
   );
 }
 
