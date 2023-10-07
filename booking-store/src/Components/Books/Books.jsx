@@ -6,6 +6,7 @@ function Books() {
   const data = useBooksContext();
   // console.log("data--->", data);
   const [booksData, setBooksData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("")
 
   useEffect(() => {
     if (data instanceof Promise) {
@@ -17,10 +18,29 @@ function Books() {
     }
   }, [data]);
 
+  const filteredBooks = booksData.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   return (
     <>
+    <div>
+    <div className="flex grow my-3 justify-center">
+      <input
+        className="flex h-10 w-[650px] rounded-md bg-white border-black border-2 mx-4 px-3 py-2 text-sm placeholder:text-gray-900 focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed"
+        type="text"
+        value={searchQuery}
+        onChange={handleSearchInputChange} //
+        placeholder="Search Books Here..."
+      />
+    </div>
+    </div>
       <div className="flex justify-evenly flex-wrap gap-4 mx-6 my-4">
-        {booksData?.map((item, id) => (
+        {filteredBooks?.map((item, id) => (
           <div className="w-[300px] rounded-md border" key={id}>
             <img
               src={item?.image_url}
