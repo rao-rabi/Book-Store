@@ -45,7 +45,7 @@ function Books() {
             <img
               src={item?.image_url}
               alt="Laptop"
-              className="h-[200px] w-full rounded-t-md object-cover"
+              className="h-[280px] w-full"
             />
             <div className="p-4">
               <h1 className="inline-flex items-center text-lg font-semibold">
